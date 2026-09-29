@@ -1,18 +1,12 @@
-# 🎟️ Evently — Etkinlik Yönetim ve Biletleme Mobil Uygulaması
+# Evently — Etkinlik Yönetim ve Biletleme Mobil Uygulaması
+  
 
-> **Staj Projesi** | React Native (Expo) + Laravel 12 REST API  
-> Geliştirici: Öğrenci Stajyeri | Akademik Yıl 2025–2026
-
----
-
-## 📋 Proje Özeti ve Amacı
-
-**Evently**, kullanıcıların yakın çevresindeki ve ülke genelindeki etkinlikleri keşfedebileceği, favorilere ekleyebileceği ve dijital bilet satın alabileceği tam yığın (full-stack) bir mobil uygulamadır.
+##  Proje Özeti ve Amacı
+**Evently**, kullanıcıların etkinlikleri keşfedebileceği, favorilere ekleyebileceği ve dijital bilet satın alabileceği tam yığın (full-stack) bir mobil uygulamadır.
 
 ### Çözülen Problem
 Geleneksel etkinlik biletleme platformları mobil öncelikli değildir ve yerel ölçekteki etkinliklere ulaşmak için ayrı bir uygulama gerektirmez. Evently bu boşluğu doldurarak kullanıcıya tek bir uygulamadan:
 
-- 📍 Konuma göre etkinlik keşfetme
 - 🎫 Anlık dijital bilet satın alma (QR kodlu)
 - ❤️ Favori etkinlik listesi yönetimi
 - 🤖 Yapay zeka destekli etkinlik öneri chatbotu
@@ -30,7 +24,7 @@ imkânı sunar.
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
 ### Frontend — React Native / Expo
 
@@ -56,9 +50,7 @@ imkânı sunar.
 | **SQLite** | — | Geliştirme veritabanı |
 | **Carbon** | — | Tarih/saat işlemleri |
 
----
-
-## ⚙️ Kurulum ve Çalıştırma
+##  Kurulum ve Çalıştırma
 
 ### Gereksinimler
 
@@ -72,8 +64,6 @@ Kurulumdan önce aşağıdaki yazılımların sisteminizde kurulu olduğunu doğ
 ✅ Expo CLI  →  npm install -g expo-cli
 ✅ Expo Go   →  Telefonunuza App Store / Play Store'dan kurun
 ```
-
----
 
 ### 1️⃣ Laravel Backend Kurulumu
 
@@ -107,13 +97,11 @@ E-posta : demo@evently.app
 Şifre   : Test1234!
 ```
 
----
-
-### 2️⃣ Mobil Uygulama Kurulumu
+### Mobil Uygulama Kurulumu
 
 ```bash
 # 1. Mobile dizinine girin
-cd "yeni staj projesi/mobile"
+cd "Evently_App/mobile"
 
 # 2. Node bağımlılıklarını yükleyin
 npm install
@@ -124,7 +112,7 @@ npm start
 npx expo start
 ```
 
-#### 📱 IP Adresi Ayarı (Kritik Adım)
+#### IP Adresi Ayarı 
 
 Fiziksel cihazda veya gerçek bir ağda test ederken `mobile/src/constants/config.ts` dosyasındaki `LOCAL_LAN_IP` değerini **bilgisayarınızın güncel Wi-Fi IP adresiyle** güncelleyin:
 
@@ -143,21 +131,19 @@ const LOCAL_LAN_IP = '192.168.1.XXX';   // ← buraya bilgisayarınızın IP'si
 | Otomatik Tespit (Expo Go) | `config.ts` dinamik olarak çözer ✅ |
 
 > **Not:** Expo Go uygulaması açıkken `config.ts` dosyası `hostUri` üzerinden bilgisayarın IP adresini otomatik algılar. Manuel güncelleme yalnızca bu başarısız olursa gereklidir.
+> 
 
----
-
-### 3️⃣ Uygulamayı Telefona Bağlamak
+### Uygulamayı Telefona Bağlamak
 
 1. Expo Go uygulamasını telefonunuza indirin.
 2. `npm start` ile terminalde gösterilen **QR kodu** taratın.
 3. Uygulama otomatik olarak yüklenecektir.
 
----
 
 ## 📂 Proje Dizin Yapısı
 
 ```
-yeni staj projesi/
+Evently_App/
 │
 ├── laravel-backend/                  ← PHP Laravel REST API
 │   ├── app/
@@ -210,17 +196,14 @@ yeni staj projesi/
     └── App.tsx
 ```
 
----
-
-## 🔌 API Dokümantasyonu
+##  API Dokümantasyonu
 
 **Base URL:** `http://<SUNUCU_IP>:8000/api`  
 **Uyumluluk:** `/api/v1/...` prefix'i de desteklenmektedir.  
 **Kimlik Doğrulama:** `Authorization: Bearer <TOKEN>` başlığı
 
----
 
-### 🔐 Kimlik Doğrulama (Auth)
+### Kimlik Doğrulama (Auth)
 
 | Method | Endpoint | İstek Gövdesi | Auth | Açıklama |
 |---|---|---|---|---|
@@ -241,9 +224,7 @@ yeni staj projesi/
 }
 ```
 
----
-
-### 🎉 Etkinlikler (Events)
+### Etkinlikler (Events)
 
 | Method | Endpoint | Parametreler | Auth | Açıklama |
 |---|---|---|---|---|
@@ -267,7 +248,7 @@ yeni staj projesi/
 
 ---
 
-### ❤️ Favoriler (Favorites)
+### Favoriler (Favorites)
 
 | Method | Endpoint | Auth | Açıklama |
 |---|---|---|---|
@@ -278,7 +259,7 @@ yeni staj projesi/
 
 ---
 
-### 🎫 Biletler (Tickets)
+### Biletler (Tickets)
 
 | Method | Endpoint | İstek Gövdesi | Auth | Açıklama |
 |---|---|---|---|---|
@@ -326,7 +307,7 @@ Content-Type: application/json
 
 ---
 
-## ✅ Test Senaryoları
+## Test Senaryoları
 
 Aşağıdaki senaryolar, uygulamanın uçtan uca doğru çalıştığını doğrulamak için kullanılabilir.
 
@@ -406,7 +387,7 @@ Aşağıdaki senaryolar, uygulamanın uçtan uca doğru çalıştığını doğr
 
 ---
 
-## 🏛️ Mimari Genel Bakış
+## Mimari Genel Bakış
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -432,9 +413,7 @@ Aşağıdaki senaryolar, uygulamanın uçtan uca doğru çalıştığını doğr
 └─────────────────────────────────────────────────────────┘
 ```
 
----
-
-## 🔑 Güvenlik Notları
+## Güvenlik Notları
 
 - Tüm korumalı endpoint'ler `auth:sanctum` middleware'i ile güvence altındadır.
 - Bilet satın alma işleminde tarih kontrolü backend tarafında `Carbon` ile yapılır.
@@ -442,14 +421,9 @@ Aşağıdaki senaryolar, uygulamanın uçtan uca doğru çalıştığını doğr
 - Şifreler `bcrypt` ile hashlenmektedir.
 - Token'lar kullanıcı başına veritabanında saklanır ve `/auth/logout` ile geçersiz kılınır.
 
----
 
-## 📌 Bilinen Sınırlamalar
+## Bilinen Sınırlamalar
 
 - Ödeme sistemi: Gerçek para transferi entegrasyonu yoktur (demo amaçlıdır).
 - Veritabanı: SQLite kullanılmaktadır; üretim ortamı için MySQL/PostgreSQL önerilir.
 - Bildirimler: Push notification entegrasyonu bulunmamaktadır.
-
----
-
-*Bu proje, yazılım mühendisliği stajı kapsamında eğitim amaçlı geliştirilmiştir.*
