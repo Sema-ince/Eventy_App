@@ -1,0 +1,20 @@
+# Backend
+backend/node_modules/
+backend/dist/
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+backend/.env
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/android/
+mobile/ios/
+
+# General
+.DS_Store
+*.log
+.env
+.env.local
+.agent/
